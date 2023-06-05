@@ -3,9 +3,9 @@ package com.example.springboot;
 public class Meal {
     private String name;
     private String description;
-    private String price;
+    private double price;
 
-    public Meal(String name, String description, String price) {
+    public Meal(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -19,7 +19,7 @@ public class Meal {
         return description;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 }
