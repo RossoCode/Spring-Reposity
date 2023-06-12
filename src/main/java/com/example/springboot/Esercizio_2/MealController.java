@@ -1,5 +1,6 @@
-package com.example.springboot;
+package com.example.springboot.Esercizio_2;
 
+import com.example.springboot.Entità.Meal;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
