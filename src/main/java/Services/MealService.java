@@ -21,7 +21,7 @@ public class MealService {
         if (meal.getName() == null || meal.getName().isEmpty()) throw new IllegalArgumentException("Nome pasto non può essere nullo");
         if (meal.getDescription() == null || meal.getDescription().isEmpty()) throw new IllegalArgumentException("Descrzione pasto non può essere nullo");
         if (meal.getPrice() <= 0) throw new IllegalArgumentException("Il pasto non può avere un prezzo uguale oo più basso di 0");
-        if (meal.getPrice() > 100) throw new IllegalArgumentException("Il pasto non può avere un prezzo superiore a 100")
+        if (meal.getPrice() > 100) throw new IllegalArgumentException("Il pasto non può avere un prezzo superiore a 100");
         mealDao.addMeal(meal);
     }
 
