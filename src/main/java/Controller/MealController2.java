@@ -1,4 +1,4 @@
-package com.example.springboot.Esercizio_3;
+package Controller;
 
 import com.example.springboot.Entità.Meal;
 import org.springframework.http.HttpStatus;

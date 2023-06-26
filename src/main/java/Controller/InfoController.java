@@ -1,4 +1,4 @@
-package com.example.springboot.Esercizio_1;
+package Controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
