@@ -1,11 +1,11 @@
 package com.example.springboot.Esercizio_4.Entità;
 
-public class Meal {
+public class Meals {
     private String name;
     private String description;
     private double price;
 
-    public Meal(String name, String description, double price) {
+    public Meals(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;

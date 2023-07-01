@@ -1,7 +1,7 @@
 package com.example.springboot.Esercizio_4.Services;
 
 import com.example.springboot.Esercizio_4.Dao.MealDao;
-import com.example.springboot.Esercizio_4.Entità.Meal;
+import com.example.springboot.Esercizio_4.Entità.Meals;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class MealService {
     this.mealDao = mealDao;
     }
 
-    public void addMeal(Meal meal) {
+    public void addMeal(Meals meal) {
         if (meal == null) throw new IllegalArgumentException("Il pasto non può essere vuoto");
         if (meal.getName() == null || meal.getName().isEmpty()) throw new IllegalArgumentException("Nome pasto non può essere nullo");
         if (meal.getDescription() == null || meal.getDescription().isEmpty()) throw new IllegalArgumentException("Descrizione pasto non può essere nullo");
@@ -29,11 +29,11 @@ public class MealService {
         mealDao.removeMeal(mealName);
     }
 
-    public void updateMeal(Meal meal) {
+    public void updateMeal(Meals meal) {
         mealDao.updateMeal(meal);
     }
 
-    public List<Meal> getMeals() {
+    public List<Meals> getMeals() {
         return mealDao.getMeals();
     }
 
