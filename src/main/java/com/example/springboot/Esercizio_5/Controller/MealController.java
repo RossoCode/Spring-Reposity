@@ -1,7 +1,7 @@
-package Controller;
+package com.example.springboot.Esercizio_5.Controller;
 
-import Services.MealService;
-import com.example.springboot.Entità.Meal;
+import com.example.springboot.Esercizio_5.Services.MealService;
+import com.example.springboot.Esercizio_5.Entità.Meal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class MealController {
         return ResponseEntity.ok(mealService.getMeals());
     }
 
-    @PutMapping("/put/meal")
+    @PostMapping("/post/meal")
     public ResponseEntity<String> putMeals(@RequestBody Meal meal){
        try {
            mealService.addMeal(meal);
@@ -40,9 +40,9 @@ public class MealController {
         return ResponseEntity.ok("Pasto eliminato");
     }
 
-    @PostMapping("/post/replace-meal")
+    @PutMapping("/put/replace-meal")
     public ResponseEntity<String> replaceMeals(@RequestBody Meal meal){
-
+        mealService.updateMeal(meal);
         return ResponseEntity.ok("Pasto aggiornato");
     }
 }

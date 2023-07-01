@@ -1,7 +1,7 @@
-package Services;
+package com.example.springboot.Esercizio_5.Services;
 
-import Dao.MealDao;
-import com.example.springboot.Entità.Meal;
+import com.example.springboot.Esercizio_5.Dao.MealDao;
+import com.example.springboot.Esercizio_5.Entità.Meal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class MealService {
     public void addMeal(Meal meal) {
         if (meal == null) throw new IllegalArgumentException("Il pasto non può essere vuoto");
         if (meal.getName() == null || meal.getName().isEmpty()) throw new IllegalArgumentException("Nome pasto non può essere nullo");
-        if (meal.getDescription() == null || meal.getDescription().isEmpty()) throw new IllegalArgumentException("Descrzione pasto non può essere nullo");
+        if (meal.getDescription() == null || meal.getDescription().isEmpty()) throw new IllegalArgumentException("Descrizione pasto non può essere nullo");
         if (meal.getPrice() <= 0) throw new IllegalArgumentException("Il pasto non può avere un prezzo uguale oo più basso di 0");
         if (meal.getPrice() > 100) throw new IllegalArgumentException("Il pasto non può avere un prezzo superiore a 100");
         mealDao.addMeal(meal);

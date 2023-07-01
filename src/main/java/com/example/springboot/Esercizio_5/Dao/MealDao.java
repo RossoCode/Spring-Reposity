@@ -1,10 +1,9 @@
-package Dao;
+package com.example.springboot.Esercizio_5.Dao;
 
-import com.example.springboot.Entità.Meal;
+import com.example.springboot.Esercizio_5.Entità.Meal;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
