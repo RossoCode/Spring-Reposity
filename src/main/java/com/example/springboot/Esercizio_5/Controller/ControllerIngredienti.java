@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class ControllerIngredienti {
 
-        private ServiceIngredienti ingredientService;
+        private ServiceIngredienti ingredientiService;
 
         @Autowired
         public ControllerIngredienti(ServiceIngredienti ingredientService) {
-            this.ingredientService = ingredientService;
+            this.ingredientiService = ingredientService;
         }
-    @GetMapping("/{id}")
+    @GetMapping("/get/ingredienti/{id}")
     public Ingredienti getIngrediente(@PathVariable Long id) {
         return ServiceIngredienti.getIngredienteById(id);
     }
 
-    @PostMapping
+    @PostMapping("/post/ingredienti")
     public Ingredienti createIngrediente(@RequestBody Ingredienti ingrediente) {
         return ServiceIngredienti.createIngrediente(ingrediente);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/put/ingredienti/{id}")
     public Ingredienti updateIngrediente(@PathVariable Long id, @RequestBody Ingredienti ingrediente) {
         return ServiceIngredienti.updateIngrediente(id, ingrediente);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/ingredienti/{id}")
     public void deleteIngrediente(@PathVariable Long id) {
         ServiceIngredienti.deleteIngrediente(id);
     }
