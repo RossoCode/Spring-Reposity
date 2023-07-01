@@ -1,8 +1,8 @@
-package com.example.springboot.Esercizio_6.Dao;
+package com.example.springboot.Esercizio_5.Dao;
 
 
 
-import com.example.springboot.Esercizio_6.Entità.Ingredienti;
+import com.example.springboot.Esercizio_5.Entità.Ingredienti;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.springboot.Esercizio_6.Entità;
+package com.example.springboot.Esercizio_5.Entità;
 
 
 public class Ingredienti {

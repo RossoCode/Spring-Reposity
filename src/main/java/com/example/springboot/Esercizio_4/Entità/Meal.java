@@ -1,4 +1,4 @@
-package com.example.springboot.Esercizio_5.Entità;
+package com.example.springboot.Esercizio_4.Entità;
 
 public class Meal {
     private String name;

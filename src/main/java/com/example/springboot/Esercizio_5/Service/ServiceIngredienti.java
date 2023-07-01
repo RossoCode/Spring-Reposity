@@ -1,7 +1,7 @@
-package com.example.springboot.Esercizio_6.Service;
+package com.example.springboot.Esercizio_5.Service;
 
-import com.example.springboot.Esercizio_6.Dao.DaoIngredienti;
-import com.example.springboot.Esercizio_6.Entità.Ingredienti;
+import com.example.springboot.Esercizio_5.Dao.DaoIngredienti;
+import com.example.springboot.Esercizio_5.Entità.Ingredienti;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

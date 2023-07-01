@@ -1,8 +1,8 @@
-package com.example.springboot.Esercizio_6.Controller;
+package com.example.springboot.Esercizio_5.Controller;
 
 
-import com.example.springboot.Esercizio_6.Entità.Ingredienti;
-import com.example.springboot.Esercizio_6.Service.ServiceIngredienti;
+import com.example.springboot.Esercizio_5.Entità.Ingredienti;
+import com.example.springboot.Esercizio_5.Service.ServiceIngredienti;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
