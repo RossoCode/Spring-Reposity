@@ -1,6 +1,6 @@
 package com.example.springboot.Esercizio_5.Service;
 
-import com.example.springboot.Esercizio_5.Dao.DaoIngredienti;
+import com.example.springboot.Esercizio_5.Repository.DaoIngredienti;
 import com.example.springboot.Esercizio_5.Entità.Ingredienti;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,28 +15,28 @@ public class ServiceIngredienti {
         this.ingredientiDao = ingredientiDao;
     }
 
-    public static Ingredienti getIngredienteById(Long id) {
-        return DaoIngredienti.findById(id);
+    public Ingredienti getIngredienteById(Long id) {
+        return ingredientiDao.findById(id).orElse(null);
     }
 
-    public static Ingredienti createIngrediente(Ingredienti ingrediente) {
-        return DaoIngredienti.save(ingrediente);
+    public Ingredienti createIngrediente(Ingredienti ingrediente) {
+        return ingredientiDao.save(ingrediente);
     }
 
-    public static Ingredienti updateIngrediente(Long id, Ingredienti ingrediente) {
-        Ingredienti existingIngrediente = getIngredienteById(id);
-        existingIngrediente.setName(ingrediente.getName());
-        existingIngrediente.setVegetarian(ingrediente.isVegetarian());
-        existingIngrediente.setVegan(ingrediente.isVegan());
-        existingIngrediente.setGlutenFree(ingrediente.isGlutenFree());
-        existingIngrediente.setLactoseFree(ingrediente.isLactoseFree());
-        return DaoIngredienti.save(existingIngrediente);
+    public Ingredienti updateIngrediente(Long id, Ingredienti ingrediente) {
+        Ingredienti existingIngrediente = ingredientiDao.findById(id).orElse(null);
+        if (existingIngrediente != null) {
+            existingIngrediente.setName(ingrediente.getName());
+            existingIngrediente.setVegetarian(ingrediente.isVegetarian());
+            existingIngrediente.setVegan(ingrediente.isVegan());
+            existingIngrediente.setGlutenFree(ingrediente.isGlutenFree());
+            existingIngrediente.setLactoseFree(ingrediente.isLactoseFree());
+            return ingredientiDao.save(existingIngrediente);
+        }
+        return null;
     }
 
-    public static void deleteIngrediente(Long id) {
-        Ingredienti ingrediente = getIngredienteById(id);
-        DaoIngredienti.delete(ingrediente);
+    public void deleteIngrediente(Long id) {
+        ingredientiDao.deleteById(id);
     }
-
 }
-
