@@ -1,7 +1,13 @@
-package com.example.springboot.Esercizio_5.Entità;
+package com.example.springboot.Esercizio_5.Entity;
 
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 public class Ingredienti {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private boolean isVegetarian;

@@ -1,16 +1,16 @@
 package com.example.springboot.Esercizio_5.Service;
 
 import com.example.springboot.Esercizio_5.Repository.DaoIngredienti;
-import com.example.springboot.Esercizio_5.Entità.Ingredienti;
+import com.example.springboot.Esercizio_5.Entity.Ingredienti;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ServiceIngredienti {
 
+    @Autowired
     private DaoIngredienti ingredientiDao;
 
-    @Autowired
     public ServiceIngredienti(DaoIngredienti ingredientiDao) {
         this.ingredientiDao = ingredientiDao;
     }
