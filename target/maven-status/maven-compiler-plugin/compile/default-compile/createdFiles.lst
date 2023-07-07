@@ -1,0 +1,14 @@
+com\example\springboot\Esercizio_5\Controller\ControllerIngredienti.class
+com\example\springboot\Esercizio_6\Entità\Meal.class
+com\example\springboot\Esercizio_5\Entity\Ingredienti.class
+com\example\springboot\Esercizio_5\Service\ServiceIngredienti.class
+com\example\springboot\Esercizio_6\Service\WinterMealService.class
+com\example\springboot\Esercizio_4\Entità\Meals.class
+com\example\springboot\Esercizio_6\Dao\WinterDao.class
+com\example\springboot\Esercizio_5\Repository\DaoIngredienti.class
+com\example\springboot\Esercizio_4\Controller\MealController.class
+com\example\springboot\Esercizio_4\Dao\MealDao.class
+com\example\springboot\Application.class
+com\example\springboot\Esercizio_6\Controller\WinterMealController.class
+com\example\springboot\Esercizio_6\Entità\Season.class
+com\example\springboot\Esercizio_4\Services\MealService.class

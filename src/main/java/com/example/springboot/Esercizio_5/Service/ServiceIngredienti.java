@@ -5,18 +5,20 @@ import com.example.springboot.Esercizio_5.Entity.Ingredienti;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ServiceIngredienti {
 
-    @Autowired
     private DaoIngredienti ingredientiDao;
 
+    @Autowired
     public ServiceIngredienti(DaoIngredienti ingredientiDao) {
         this.ingredientiDao = ingredientiDao;
     }
 
-    public Ingredienti getIngredienteById(Long id) {
-        return ingredientiDao.findById(id).orElse(null);
+    public Optional<Ingredienti>  getIngredienteById(Long id) {
+        return ingredientiDao.findById(id);
     }
 
     public Ingredienti createIngrediente(Ingredienti ingrediente) {

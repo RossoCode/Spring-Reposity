@@ -1,18 +1,23 @@
 package com.example.springboot.Esercizio_5.Entity;
 
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table
 public class Ingredienti {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+   @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private boolean isVegetarian;
+    @Column(nullable = false)
     private boolean isVegan;
+    @Column(nullable = false)
     private boolean isGlutenFree;
+    @Column(nullable = false)
     private boolean isLactoseFree;
 
     public Ingredienti(Long id, String name, boolean isVegetarian,
@@ -23,6 +28,9 @@ public class Ingredienti {
         this.isVegan = isVegan;
         this.isGlutenFree = isGlutenFree;
         this.isLactoseFree = isLactoseFree;
+    }
+
+    public Ingredienti() {
     }
 
     public Long getId() {
